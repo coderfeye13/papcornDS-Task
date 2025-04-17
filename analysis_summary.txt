@@ -1,0 +1,44 @@
+
+📄 Papcorns Teknik Değerlendirme - Analiz Özeti
+
+Bu dosya, Papcorns veri bilimi teknik değerlendirmesi kapsamında yapılan analizleri, kullanılan yöntemleri ve elde edilen çıkarımları özetlemektedir.
+
+🔧 1. Ortam Kurulumu ve Veritabanı Bağlantısı
+- SQLite veritabanı olan `papcorns.sqlite` dosyasına bağlantı sağlandı.
+- `users` ve `user_events` tabloları incelendi, yapıları anlaşıldı.
+
+🔍 2. Veri Keşfi (EDA)
+- Kullanıcılar ve event verisi keşfedildi.
+- Verilerin dağılımları, eksik değerler ve temel istatistikler analiz edildi.
+- `event_type`, `attribution_source`, `country` gibi kolonlar temelinde görsel analizler yapıldı.
+
+✅ Görev 1: Ülke Bazında Toplam Abonelik Geliri
+- `subscription_started` ve `subscription_renewed` event'leri kullanılarak ülke bazlı toplam gelir hesaplandı.
+- En yüksek gelirin hangi ülkelerden elde edildiği tespit edildi.
+
+✅ Görev 2: Instagram Kullanıcılarının Başlattığı Trial Sayısı
+- Kaynağı `instagram` olan kullanıcıların başlattığı `trial_started` event sayısı bulundu.
+- Instagram'ın potansiyel etkisi analiz edildi.
+
+✅ Görev 3: acquisition_channel Sütunu Oluşturma
+- `attribution_source` bilgisine göre kullanıcılar `Paid` veya `Organic` olarak etiketlendi.
+- Böylece kaynak bazlı segmentasyon sağlandı.
+
+✅ Görev 4: Trial → Subscription Dönüşüm Oranı
+- Tüm kullanıcılar için trial → abonelik geçiş oranı hesaplandı.
+- Ayrıca, bu oran Instagram, TikTok ve Organic gibi kaynaklara göre ayrı ayrı hesaplanarak pazarlama verimliliği değerlendirildi.
+- Sonuç: Belirli kaynaklardan gelen kullanıcıların daha yüksek dönüşüm oranlarına sahip olduğu gözlemlendi.
+
+✅ Görev 5: Medyan Abonelik Süresi (Ülke Bazında)
+- Her bir ülke için kullanıcıların aboneliklerinin medyan süresi (ay cinsinden) hesaplandı.
+- Kullanıcı bağlılığının ülkelere göre nasıl değiştiği analiz edildi.
+
+✅ Görev 6: Ortalama LTV (Lifetime Value)
+- Ülke bazında kullanıcı başına ortalama gelir (LTV) hesaplandı.
+- Gelir odaklı stratejilerin hangi ülkelerde daha etkili olabileceği değerlendirildi.
+
+🎯 Genel Yorumlar:
+- Instagram ve TikTok gibi kaynakların hem kullanıcı kazanımında hem de dönüşümde önemli roller oynadığı tespit edildi.
+- Organik kullanıcılar genellikle daha uzun süre abonelikte kalma eğiliminde olabilir.
+- Ülkelere göre gelir ve LTV değişimleri, lokal pazarlama stratejilerinde dikkate alınmalıdır.
+
